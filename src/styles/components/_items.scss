@@ -1,5 +1,5 @@
 .item-list__container {
-    font-size: 1.4rem;
+    font-size: $font-normal;
     margin-top: 3rem;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .item__cell {
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     border-left: .1rem solid $darker-grey;
     border-bottom: .1rem solid $darker-grey;
 }
@@ -31,6 +31,8 @@
     width: 10rem;
     display: flex;
     justify-content: space-around;
+    padding: 0 1.6rem;
+
 }
 
 .item__action {
@@ -39,6 +41,9 @@
 
 .item__action--link {
     outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .item__action--button {
@@ -48,6 +53,6 @@
 }
 
 .item__icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
 }

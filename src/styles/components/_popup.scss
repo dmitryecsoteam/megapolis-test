@@ -10,11 +10,11 @@
 }
 
 .add-popup__label {
-    font-size: 1.4rem;
+    font-size: $font-normal;
 }
 
 .add-popup__input {
-    font-size: 1.4rem;
+    font-size: $font-normal;
     background: $grey;
     outline: none;
     border: none;
@@ -23,9 +23,9 @@
 }
 
 .add-popup__error {
-    font-size: 1.2rem;
+    font-size: $font-small;
     color: $red;
-    height: 1.3rem;
+    height: calc(#{$font-small} + .1rem);
 }
 
 .add-popup__button {

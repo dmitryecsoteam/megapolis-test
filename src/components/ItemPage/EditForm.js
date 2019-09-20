@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 
@@ -85,23 +85,29 @@ class EditForm extends React.Component {
 
     render() {
 
+        // Отрендерить форму, только если данные загружены из апи
         return (
-            <div className="edit-form__container">
-                <form
-                    className='add-popup__form-container'
-                    onSubmit={this.onFormSubmit}
-                >
-                    <label className='add-popup__label'>Краткое описание</label>
-                    <input
-                        className='add-popup__input'
-                        type="text"
-                        value={this.state.title}
-                        onChange={this.onTitleChange}
-                    />
-                    <div className='add-popup__error'>{this.state.error && "Заголовок не может быть пустым"}</div>
-                    {this.state.button}
-                </form>
-            </div>
+            <Fragment>
+                {this.props.items[0] !== 'INIT' && (
+                    <div className="edit-form__container">
+                    <form
+                        className='add-popup__form-container'
+                        onSubmit={this.onFormSubmit}
+                    >
+                        <label className='add-popup__label'>Краткое описание</label>
+                        <input
+                            className='add-popup__input'
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.onTitleChange}
+                        />
+                        <div className='add-popup__error'>{this.state.error && "Заголовок не может быть пустым"}</div>
+                        {this.state.button}
+                    </form>
+                </div>
+                )}
+            </Fragment>
+            
 
         );
     }
