@@ -1,0 +1,15 @@
+.app__container {
+    max-width: 128rem;
+    background-color: $white;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 4.5rem;
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+}
+
+#root {
+    height: 100%;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import ConnectedHeader from './ConnectedHeader';
-import ConnectedItemList from './ConnectedItemList';
+import Header from './Header';
+import ItemList from './ConnectedItemList';
 
 export default () => (
     <div>
-        <ConnectedHeader />
-        <ConnectedItemList />
+        <Header />
+        <ItemList />
     </div>
 );

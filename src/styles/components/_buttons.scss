@@ -1,0 +1,42 @@
+.button {
+    font-size: 1.4rem;
+    background: $white;
+    border-radius: 0.3rem;
+    height: 3.6rem;
+    cursor: pointer;
+}
+
+.button--small {
+    width: 14.7rem;
+}
+
+.button--big {
+    width: 16.4rem;
+}
+
+.button--green {
+    border: 0.1rem solid $green;
+}
+
+.button--green:hover {
+    background: $green;
+    color: $white;
+}
+
+.button--red {
+    border: 0.1rem solid $red;
+}
+
+.button--red:hover {
+    background: $red;
+    color: $white;
+}
+
+.button--blue {
+    border: 0.1rem solid $blue;
+}
+
+.button--blue:hover {
+    background: $blue;
+    color: $white;
+}

@@ -1,17 +1,17 @@
+import EditForm from './EditForm';
 import { connect } from 'react-redux';
-import { startDeleteItem, deleteItem } from '../../actions';
-import ItemList from './ItemList';
+import { withRouter } from 'react-router-dom';
+import { editItem } from '../../actions';
 
 const mapStateToProps = state => ({
     items: state
 });
 
 const mapDispatchToProps = dispatch => ({
-    //deleteItem: id => dispatch(startDeleteItem(id))
-    deleteItem: id => dispatch(deleteItem(id))
+    editItem: (title, id) => dispatch(editItem(title, id))
 });
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(ItemList);
+  )(withRouter(EditForm));

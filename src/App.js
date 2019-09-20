@@ -13,7 +13,9 @@ class App extends React.Component {
 
   render() {
     return (
+      <div className="app__container">
         <AppRouter />
+      </div>
     )
   }
 }
