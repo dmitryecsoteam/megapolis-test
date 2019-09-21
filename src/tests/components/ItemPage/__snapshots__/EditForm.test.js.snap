@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render form if items array is "INIT" 1`] = `<Fragment />`;
+
+exports[`should render error message on empty title save 1`] = `
+<div
+  className="add-popup__error"
+>
+  Заголовок не может быть пустым
+</div>
+`;
+
+exports[`should render form 1`] = `
+<Fragment>
+  <div
+    className="edit-form__container"
+  >
+    <form
+      className="add-popup__form-container"
+      onSubmit={[Function]}
+    >
+      <label
+        className="add-popup__label"
+      >
+        Краткое описание
+      </label>
+      <input
+        className="add-popup__input"
+        onChange={[Function]}
+        type="text"
+        value="first item"
+      />
+      <div
+        className="add-popup__error"
+      />
+      <button
+        className="button button--big button--blue"
+      >
+        Вернуться в список
+      </button>
+    </form>
+  </div>
+</Fragment>
+`;
+
+exports[`should render save button when value of input is not equal to title 1`] = `
+<button
+  className="button button--small button--blue"
+>
+  Сохранить
+</button>
+`;

@@ -11,7 +11,7 @@ const ItemList = ({ items, deleteItem }) => (
     <div className='item-list__container'>
         {items.length === 0 ? <div>н/д</div> :
             items[0] !== 'INIT' && items.map(item => (
-                <Item key={item.id} {...item} deleteItem={() => deleteItem(item.id)} />
+                <Item key={item.id} {...item} deleteItem={deleteItem} />
             ))}
     </div>
 );

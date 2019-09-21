@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Popup component 1`] = `
+<Popup
+  addItem={[MockFunction]}
+>
+  <Popup
+    arrow={true}
+    arrowStyle={Object {}}
+    className=""
+    closeOnDocumentClick={true}
+    closeOnEscape={true}
+    contentStyle={
+      Object {
+        "borderRadius": "6px",
+        "height": "18rem",
+        "padding": "2.6rem 3.2rem",
+        "width": "46.4rem",
+      }
+    }
+    defaultOpen={false}
+    disabled={false}
+    keepTooltipInside={false}
+    lockScroll={false}
+    modal={true}
+    mouseEnterDelay={100}
+    mouseLeaveDelay={100}
+    offsetX={0}
+    offsetY={0}
+    on={
+      Array [
+        "click",
+      ]
+    }
+    onClose={[Function]}
+    onOpen={[Function]}
+    open={false}
+    overlayStyle={
+      Object {
+        "background": "rgba(242,242,242,0.5)",
+      }
+    }
+    position="bottom center"
+    repositionOnResize={true}
+    trigger={
+      <button
+        className="button button--small button--green"
+      >
+        Добавить
+      </button>
+    }
+  >
+    <button
+      className="button button--small button--green"
+      key="T"
+      onClick={[Function]}
+    >
+      Добавить
+    </button>
+    <div
+      key="H"
+      style={
+        Object {
+          "left": "0px",
+          "position": "absolute",
+          "top": "0px",
+        }
+      }
+    />
+    <div
+      className="popup-overlay "
+      key="O"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "rgba(242,242,242,0.5)",
+          "bottom": "0",
+          "display": "flex",
+          "left": "0",
+          "position": "fixed",
+          "right": "0",
+          "top": "0",
+          "zIndex": "999",
+        }
+      }
+    >
+      <div
+        className="popup-content "
+        key="C"
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(187, 187, 187)",
+            "borderRadius": "6px",
+            "height": "18rem",
+            "margin": "auto",
+            "padding": "2.6rem 3.2rem",
+            "position": "relative",
+            "width": "46.4rem",
+          }
+        }
+      >
+        <div
+          className="add-popup__container"
+        >
+          <button
+            className="add-popup__close-btn"
+            onClick={[Function]}
+          >
+            ✕
+          </button>
+          <form
+            className="add-popup__form-container"
+            onSubmit={[Function]}
+          >
+            <label
+              className="add-popup__label"
+            >
+              Краткое описание
+            </label>
+            <input
+              className="add-popup__input"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="add-popup__error"
+            />
+            <button
+              className="button button--small button--green add-popup__button"
+            >
+              Создать
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </Popup>
+</Popup>
+`;
+
+exports[`should render Popup component 2`] = `
+<Popup
+  addItem={[MockFunction]}
+>
+  <Popup
+    arrow={true}
+    arrowStyle={Object {}}
+    className=""
+    closeOnDocumentClick={true}
+    closeOnEscape={true}
+    contentStyle={
+      Object {
+        "borderRadius": "6px",
+        "height": "18rem",
+        "padding": "2.6rem 3.2rem",
+        "width": "46.4rem",
+      }
+    }
+    defaultOpen={false}
+    disabled={false}
+    keepTooltipInside={false}
+    lockScroll={false}
+    modal={true}
+    mouseEnterDelay={100}
+    mouseLeaveDelay={100}
+    offsetX={0}
+    offsetY={0}
+    on={
+      Array [
+        "click",
+      ]
+    }
+    onClose={[Function]}
+    onOpen={[Function]}
+    open={false}
+    overlayStyle={
+      Object {
+        "background": "rgba(242,242,242,0.5)",
+      }
+    }
+    position="bottom center"
+    repositionOnResize={true}
+    trigger={
+      <button
+        className="button button--small button--green"
+      >
+        Добавить
+      </button>
+    }
+  >
+    <button
+      className="button button--small button--green"
+      key="T"
+      onClick={[Function]}
+    >
+      Добавить
+    </button>
+  </Popup>
+</Popup>
+`;
+
+exports[`should render error message when add item with empty title 1`] = `
+<div
+  className="add-popup__error"
+>
+  Заголовок не может быть пустым
+</div>
+`;

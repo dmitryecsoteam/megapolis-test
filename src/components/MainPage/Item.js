@@ -14,7 +14,7 @@ const Item = ({ id, title, deleteItem }) => (
             <Link className='item__action item__action--link' to={`/items/${id}`} >
                 <img className='item__icon' src={editIcon} alt='Edit' />
             </Link>
-            <button className='item__action item__action--button' onClick={deleteItem} >
+            <button className='item__action item__action--button' onClick={() => deleteItem(id)} >
                 <img className='item__icon' src={deleteIcon} alt='Delete' />
             </button>
         </div>

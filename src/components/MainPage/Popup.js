@@ -23,7 +23,7 @@ class Popup extends React.Component {
             error: true
         });
         else {
-            this.props.addItem(this.state.title, Math.floor(Math.random() * 1000));
+            this.props.addItem(this.state.title);
             close();
         }
     }

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header component 1`] = `
+<div
+  className="header__container"
+>
+  <h1
+    className="header__title header__title--bold"
+  >
+    Список задач
+  </h1>
+  <Connect(Popup) />
+</div>
+`;

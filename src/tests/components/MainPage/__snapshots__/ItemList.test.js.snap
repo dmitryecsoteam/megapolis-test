@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render list, if items array contains "INIT" 1`] = `
+<div
+  className="item-list__container"
+/>
+`;
+
+exports[`should render list of items from items array 1`] = `
+<div
+  className="item-list__container"
+>
+  <Item
+    deleteItem={[Function]}
+    id={1}
+    key="1"
+    title="first"
+  />
+  <Item
+    deleteItem={[Function]}
+    id={2}
+    key="2"
+    title="second"
+  />
+</div>
+`;
+
+exports[`should render message if items array is empty 1`] = `
+<div
+  className="item-list__container"
+>
+  <div>
+    н/д
+  </div>
+</div>
+`;

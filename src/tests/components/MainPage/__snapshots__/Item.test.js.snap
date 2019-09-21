@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Item component 1`] = `
+<div
+  className="item__container"
+>
+  <div
+    className="item__id item__cell"
+  >
+    Задача №
+    1
+  </div>
+  <div
+    className="item__title item__cell"
+  >
+    test
+  </div>
+  <div
+    className="item__actions-container item__cell"
+  >
+    <Link
+      className="item__action item__action--link"
+      to="/items/1"
+    >
+      <img
+        alt="Edit"
+        className="item__icon"
+        src="edit.svg"
+      />
+    </Link>
+    <button
+      className="item__action item__action--button"
+      onClick={[Function]}
+    >
+      <img
+        alt="Delete"
+        className="item__icon"
+        src="delete.svg"
+      />
+    </button>
+  </div>
+</div>
+`;

@@ -63,7 +63,7 @@ test('should fetch list of items from API and set them in store', () => {
 
 
     const store = createMockStore([]);
-    store.dispatch(fetchItems())
+    return store.dispatch(fetchItems())
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(1);
@@ -77,7 +77,7 @@ test('should fetch list of items from API and not set them in store if success i
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: false, error: 'error message' }))));
 
     const store = createMockStore([]);
-    store.dispatch(fetchItems())
+    return store.dispatch(fetchItems())
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(0);
@@ -89,7 +89,7 @@ test('should add item to API and store', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: true, id: 1 }))));
 
     const store = createMockStore([]);
-    store.dispatch(startAddItem('new item'))
+    return store.dispatch(startAddItem('new item'))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(1);
@@ -104,7 +104,7 @@ test('should not add item to store if success is false', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: false, error: 'error message' }))));
 
     const store = createMockStore([]);
-    store.dispatch(startAddItem('new item'))
+    return store.dispatch(startAddItem('new item'))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(0);
@@ -116,7 +116,7 @@ test('should delete item from API and store', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: true }))));
 
     const store = createMockStore([]);
-    store.dispatch(startDeleteItem(1))
+    return store.dispatch(startDeleteItem(1))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(1);
@@ -130,7 +130,7 @@ test('should not delete item from store if success is false', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: false, error: 'error message' }))));
 
     const store = createMockStore([]);
-    store.dispatch(startDeleteItem(1))
+    return store.dispatch(startDeleteItem(1))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(0);
@@ -142,13 +142,13 @@ test('should edit item in API and store', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: true }))));
 
     const store = createMockStore([]);
-    store.dispatch(startEditItem('new title', 1))
+    return store.dispatch(startEditItem('new title', 1))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(1);
             expect(expectedActions[0].type).toBe('EDIT_ITEM');
-            expect(expectedActions[0].id).toBe(1);
             expect(expectedActions[0].title).toBe('new title');
+            expect(expectedActions[0].id).toBe(1);
         });
 });
 
@@ -157,7 +157,7 @@ test('should not edit item in store if success is false', () => {
         Promise.resolve(mockResponse(200, null, JSON.stringify({ success: false, error: 'error message' }))));
 
     const store = createMockStore([]);
-    store.dispatch(startEditItem('new title', 1))
+    return store.dispatch(startEditItem('new title', 1))
         .then(() => {
             const expectedActions = store.getActions();
             expect(expectedActions.length).toBe(0);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { startDeleteItem, deleteItem } from '../../actions';
+import { startDeleteItem } from '../../actions';
 import ItemList from './ItemList';
 
 const mapStateToProps = state => ({
@@ -7,8 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    //deleteItem: id => dispatch(startDeleteItem(id))
-    deleteItem: id => dispatch(deleteItem(id))
+    deleteItem: id => dispatch(startDeleteItem(id))
 });
 
 export default connect(

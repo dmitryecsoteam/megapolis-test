@@ -77,7 +77,7 @@ export const startEditItem = (title, id) =>
         })
     }).then(res => res.json())
     .then(data => {
-        if (data.success) dispatch(editItem(id));
+        if (data.success) dispatch(editItem(title, id));
         else console.log(data.error);
     })
     .catch(error => console.log(error));
