@@ -36,14 +36,13 @@
 }
 
 .item__action {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .item__action--link {
     outline: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .item__action--button {
